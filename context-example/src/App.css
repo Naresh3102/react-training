@@ -1,3 +1,21 @@
 button:disabled {
     cursor: pointer;
 }
+
+:root {
+    --black-color: white;
+}
+
+.light-theme {
+    --primary-color: white;
+    --text-color: 
+}
+
+.dark-theme {
+    --primary-color: black;
+    --text-color: 
+}
+
+body {
+    background-color: var(--black-color);
+}
