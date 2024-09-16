@@ -2,12 +2,12 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 const Param = () => {
-    const {meetID} = useParams()
+    const {productId} = useParams()
 
-    console.log(meetID);
+    console.log(typeof(productId));
 
   return (
-    <div>Param {meetID}</div>
+    <div>Param {productId}</div>
   )
 }
 
