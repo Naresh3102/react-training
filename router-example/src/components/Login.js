@@ -1,25 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const [name, setName] = useState("");
+  const { handleLogin } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    if (name === "naresh") {
-      console.log("Logged in");
-      // Navigate logic
-      navigate("/about");
-    } else {
-      console.log("Invalid");
-    }
+  const login = () => {
+    handleLogin();
+    navigate("/");
   };
+
   return (
     <div>
       <input type="text" onChange={(e) => setName(e.target.value)} />
       <input type="password" />
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={login}>Login</button>
     </div>
   );
 };
